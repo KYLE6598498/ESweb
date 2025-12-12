@@ -266,3 +266,9 @@ ul li a:hover {
     color: cyan;
 }
 
+.wrapper-main {
+    width: 100%;
+    padding: 100px;
+    margin: 0 auto;
+    border: 4px solid blue;
+}
