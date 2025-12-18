@@ -9,18 +9,27 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(1.jpg);
     background-position: center;
     background-size: cover;
-    height: 109vh;
+    min-height: 100vh;
 }
 
 .nevbar {
-    width: 1200px;
-    height: 75px;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
     margin: auto;
+    padding: 0 15px;
 }
+
+.nevbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 
 .icon {
     width: 200px;
-    float: left;
     height: 70px;
 }
 
@@ -29,18 +38,15 @@
     font-size: 45px;
     font-family: Arial;
     padding-left: 20px;
-    float: left;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .menu {
-    width: 400px;
-    float: left;
+    flex: 1;
     height: 70px;
 }
 
 ul {
-    float: left;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +54,7 @@ ul {
 
 ul li {
     list-style: none;
-    margin-left: 62px;
+    margin: 10px;    
     margin-top: 27px;
     font-size: 14px;
 
@@ -67,10 +73,11 @@ ul li a:hover {
 }
 
 .search {
-    width: 330px;
-    float: left;
-    margin-left: 270px;
+    display: flex;
+    align-items: center;
+    gap: 0;
 }
+
 
 .srch {
     font-family: 'Times New Roman';
@@ -82,7 +89,6 @@ ul li a:hover {
     color: white;
     border-right: none;
     font-size: 16px;
-    float: left;
     padding: 10px;
     border-bottom-left-radius: 40px;
     border-top-left-radius: 5px;
@@ -109,9 +115,14 @@ ul li a:hover {
 }
 
 .content {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 15px;
+    display: grid;
     height: auto;
     margin: auto;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
     color: white;
     position: relative;
 }
@@ -163,10 +174,10 @@ ul li a:hover {
 .form {
     width: 250px;
     height: 380px;
+    margin: 40px auto 0;
+    margin-top: 30px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
-    position: absolute;
-    top: -20px;
-    left: 870px;
+    position: relative;
     border-radius: 10px;
     padding: 25px;
 }
@@ -209,7 +220,7 @@ ul li a:hover {
 
 .btnn {
     width: 240px;
-    height: 40 px;
+    height: 40px;
     background: cyan;
     border: none;
     margin-top: 30px;
@@ -264,4 +275,42 @@ ul li a:hover {
 
 .icons ion-icon:hover {
     color: cyan;
+}
+
+@media (max-width: 768px) {
+
+    .nevbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .search {
+        margin: 10px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 36px;
+        margin-top: 20px;
+    }
+
+    .content span {
+        font-size: 42px;
+    }
+
+    .form {
+        width: 90%;
+    }
 }
