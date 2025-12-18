@@ -305,7 +305,6 @@ ul li a:hover {
 
     .content {
         grid-template-columns: 1fr;
-        text-align: center;
     }
 
     .content h1,
